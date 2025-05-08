@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparativa - Sistemas Operativos | UCJC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="animated">Comparativa de Sistemas Operativos</h1>
+            <p class="subtitle animated delay-1">Análisis de Windows, Linux y macOS</p>
+            
+            <div class="university-badge animated delay-2">
+                <i class="fas fa-university"></i>
+                <span>Universidad Camilo José Cela</span>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>Sistemas Operativos</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="introduccion.html" class="nav-link">Introducción</a>
+                <a href="historia.html" class="nav-link">Historia</a>
+                <a href="comparativa.html" class="nav-link active">Comparativa</a>
+                <a href="comandos.html" class="nav-link">Comandos</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content-container">
+            <section class="content-section">
+                <h2><i class="fas fa-balance-scale"></i> Comparativa General</h2>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Característica</th>
+                                <th>Windows</th>
+                                <th>Linux</th>
+                                <th>macOS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Arquitectura</td>
+                                <td>Monolítico con módulos</td>
+                                <td>Monolítico (kernel Linux)</td>
+                                <td>Híbrido (XNU - Mach/BSD)</td>
+                            </tr>
+                            <tr>
+                                <td>Licencia</td>
+                                <td>Propietaria</td>
+                                <td>GPL (open source)</td>
+                                <td>Propietaria</td>
+                            </tr>
+                            <tr>
+                                <td>Interfaz</td>
+                                <td>GUI (Explorer)</td>
+                                <td>Múltiples (GNOME, KDE, etc.)</td>
+                                <td>GUI (Aqua)</td>
+                            </tr>
+                            <tr>
+                                <td>Seguridad</td>
+                                <td>Objetivo frecuente de malware</td>
+                                <td>Modelo de permisos robusto</td>
+                                <td>Sandboxing y firma de apps</td>
+                            </tr>
+                            <tr>
+                                <td>Mercado Objetivo</td>
+                                <td>Usuarios generales</td>
+                                <td>Servidores, desarrolladores</td>
+                                <td>Usuarios creativos/profesionales</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-chart-bar"></i> Cuota de Mercado (2023)</h2>
+                <div class="chart-container">
+                    <canvas id="marketShareChart"></canvas>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-microchip"></i> Rendimiento</h2>
+                <div class="performance-grid">
+                    <div class="performance-card">
+                        <h3>Uso de Recursos</h3>
+                        <div class="performance-bar">
+                            <div class="bar-label">Windows</div>
+                            <div class="bar-container">
+                                <div class="bar-fill windows" style="width: 75%">75%</div>
+                            </div>
+                        </div>
+                        <div class="performance-bar">
+                            <div class="bar-label">Linux</div>
+                            <div class="bar-container">
+                                <div class="bar-fill linux" style="width: 40%">40%</div>
+                            </div>
+                        </div>
+                        <div class="performance-bar">
+                            <div class="bar-label">macOS</div>
+                            <div class="bar-container">
+                                <div class="bar-fill macos" style="width: 60%">60%</div>
+                            </div>
+                        </div>
+                        <p class="performance-note">Porcentaje de uso de RAM en configuración estándar</p>
+                    </div>
+                    
+                    <div class="performance-card">
+                        <h3>Tiempo de Arranque</h3>
+                        <div class="performance-bar">
+                            <div class="bar-label">Windows</div>
+                            <div class="bar-container">
+                                <div class="bar-fill windows" style="width: 65%">25s</div>
+                            </div>
+                        </div>
+                        <div class="performance-bar">
+                            <div class="bar-label">Linux</div>
+                            <div class="bar-container">
+                                <div class="bar-fill linux" style="width: 30%">12s</div>
+                            </div>
+                        </div>
+                        <div class="performance-bar">
+                            <div class="bar-label">macOS</div>
+                            <div class="bar-container">
+                                <div class="bar-fill macos" style="width: 50%">20s</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-dollar-sign"></i> Costos</h2>
+                <div class="pricing-cards">
+                    <div class="pricing-card windows">
+                        <div class="pricing-header">
+                            <i class="fab fa-windows"></i>
+                            <h3>Windows</h3>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price">$139 - $199</div>
+                            <p>Licencia Home/Pro</p>
+                            <ul>
+                                <li>Incluido en equipos nuevos</li>
+                                <li>Actualizaciones gratuitas</li>
+                                <li>Soporte limitado</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card linux">
+                        <div class="pricing-header">
+                            <i class="fab fa-linux"></i>
+                            <h3>Linux</h3>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price">Gratis</div>
+                            <p>Open Source</p>
+                            <ul>
+                                <li>Distribuciones gratuitas</li>
+                                <li>Soporte comunitario</li>
+                                <li>Opciones empresariales con costo</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card macos">
+                        <div class="pricing-header">
+                            <i class="fab fa-apple"></i>
+                            <h3>macOS</h3>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price">Incluido</div>
+                            <p>Con hardware Apple</p>
+                            <ul>
+                                <li>Requiere Mac (desde $999)</li>
+                                <li>Actualizaciones gratuitas</li>
+                                <li>Soporte integrado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Sobre el Proyecto</h3>
+                <p>Trabajo final para la asignatura de Fundamentos de Sistemas Operativos de la Universidad Camilo José Cela.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Autores</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-user"></i> Cristian García Del Olmo</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Santiago García Frutos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Fuentes</h3>
+                <ul class="footer-links">
+                    <li><a href="https://gs.statcounter.com/" target="_blank"><i class="fas fa-chart-line"></i> StatCounter</a></li>
+                    <li><a href="https://www.phoronix.com" target="_blank"><i class="fas fa-tachometer-alt"></i> Phoronix Benchmarks</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Universidad Camilo José Cela. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/comparativa.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción - Sistemas Operativos | UCJC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="animated">Introducción a los Sistemas Operativos</h1>
+            <p class="subtitle animated delay-1">Conceptos fundamentales y arquitectura</p>
+            
+            <div class="university-badge animated delay-2">
+                <i class="fas fa-university"></i>
+                <span>Universidad Camilo José Cela</span>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>Sistemas Operativos</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="introduccion.html" class="nav-link active">Introducción</a>
+                <a href="historia.html" class="nav-link">Historia</a>
+                <a href="comparativa.html" class="nav-link">Comparativa</a>
+                <a href="comandos.html" class="nav-link">Comandos</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content-container">
+            <section class="content-section">
+                <h2><i class="fas fa-info-circle"></i> ¿Qué es un Sistema Operativo?</h2>
+                <p>Un sistema operativo (SO) es el software principal que gestiona los recursos hardware y provee servicios comunes para los programas de aplicación. Actúa como intermediario entre el usuario y el hardware del computador.</p>
+                
+                <div class="definition-box">
+                    <h3>Definición Formal</h3>
+                    <p>Según Tanenbaum (2015): "Un sistema operativo es un programa que controla la ejecución de programas de aplicación y actúa como interfaz entre las aplicaciones y el hardware del computador".</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-layer-group"></i> Arquitectura de los Sistemas Operativos</h2>
+                <div class="architecture-diagram">
+                    <div class="layer kernel">
+                        <i class="fas fa-microchip"></i>
+                        <span>Kernel</span>
+                        <p>Núcleo del SO que gestiona recursos</p>
+                    </div>
+                    <div class="layer system-calls">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Llamadas al Sistema</span>
+                        <p>Interfaz entre aplicaciones y kernel</p>
+                    </div>
+                    <div class="layer shell">
+                        <i class="fas fa-terminal"></i>
+                        <span>Shell</span>
+                        <p>Interfaz de usuario</p>
+                    </div>
+                    <div class="layer applications">
+                        <i class="fas fa-window-maximize"></i>
+                        <span>Aplicaciones</span>
+                        <p>Programas de usuario</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-tasks"></i> Funciones Principales</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-memory"></i>
+                        <h3>Gestión de Memoria</h3>
+                        <p>Asignación y liberación de memoria para procesos</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Gestión de Procesos</h3>
+                        <p>Creación, planificación y terminación de procesos</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-hdd"></i>
+                        <h3>Gestión de Archivos</h3>
+                        <p>Organización y acceso a sistemas de archivos</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-plug"></i>
+                        <h3>Gestión de Dispositivos</h3>
+                        <p>Control de periféricos mediante drivers</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-shield-alt"></i> Modos de Operación</h2>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Modo Kernel</th>
+                                <th>Modo Usuario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Acceso completo al hardware</td>
+                                <td>Acceso restringido</td>
+                            </tr>
+                            <tr>
+                                <td>Ejecuta instrucciones privilegiadas</td>
+                                <td>Solo instrucciones no privilegiadas</td>
+                            </tr>
+                            <tr>
+                                <td>Crítico para la estabilidad del sistema</td>
+                                <td>Aislado para proteger el sistema</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Sobre el Proyecto</h3>
+                <p>Trabajo final para la asignatura de Fundamentos de Sistemas Operativos de la Universidad Camilo José Cela.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Autores</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-user"></i> Cristian García Del Olmo</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Santiago García Frutos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Recursos Académicos</h3>
+                <ul class="footer-links">
+                    <li><a href="https://ucjc.notion.site/Fundamentos-de-SSOO-187770777df3802a97a4c2ff80ed689a" target="_blank"><i class="fas fa-book"></i> Notion del Curso</a></li>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> Bibliografía Recomendada</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Universidad Camilo José Cela. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos - Sistemas Operativos | UCJC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="animated">Comandos Esenciales</h1>
+            <p class="subtitle animated delay-1">Referencia rápida para terminales</p>
+            
+            <div class="university-badge animated delay-2">
+                <i class="fas fa-university"></i>
+                <span>Universidad Camilo José Cela</span>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>Sistemas Operativos</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="introduccion.html" class="nav-link">Introducción</a>
+                <a href="historia.html" class="nav-link">Historia</a>
+                <a href="comparativa.html" class="nav-link">Comparativa</a>
+                <a href="comandos.html" class="nav-link active">Comandos</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content-container">
+            <section class="content-section">
+                <h2><i class="fas fa-terminal"></i> Terminal: Conceptos Básicos</h2>
+                <p>La terminal (o línea de comandos) es una interfaz de texto para interactuar con el sistema operativo. Aunque las interfaces gráficas son dominantes, la terminal ofrece mayor control y eficiencia para muchas tareas. Los sistemas operativos modernos incluyen terminales avanzadas con características como:</p>
+                
+                <ul>
+                    <li><strong>Autocompletado</strong> con la tecla Tab</li>
+                    <li><strong>Historial de comandos</strong> (usando las flechas arriba/abajo)</li>
+                    <li><strong>Redirección de entrada/salida</strong> con >, <, |</li>
+                    <li><strong>Scripting</strong> para automatizar tareas</li>
+                </ul>
+                
+                <div class="terminal-demo">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="terminal-btn red"></span>
+                            <span class="terminal-btn yellow"></span>
+                            <span class="terminal-btn green"></span>
+                        </div>
+                        <div class="terminal-title">bash</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">user@host:~$</span> <span class="command">ls -l</span>
+                        </div>
+                        <div class="terminal-output">
+                            total 12<br>
+                            drwxr-xr-x 2 user user 4096 Jan 10 10:00 Documents<br>
+                            drwxr-xr-x 4 user user 4096 Jan 12 15:30 Projects<br>
+                            -rw-r--r-- 1 user user  123 Jan 15 09:45 notes.txt
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">user@host:~$</span> <span class="cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-code"></i> Comparativa de Comandos</h2>
+                
+                <div class="tabs-container">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab="linux">Linux</button>
+                        <button class="tab-btn" data-tab="windows">Windows</button>
+                        <button class="tab-btn" data-tab="macos">macOS</button>
+                    </div>
+                    
+                    <div class="tabs-content">
+                        <!-- Pestaña Linux -->
+                        <div class="tab-pane active" id="linux-tab">
+                            <div class="command-card">
+                                <h3>Navegación de Archivos</h3>
+                                <ul class="command-list">
+                                    <li><code>ls -la</code> - Listar archivos incluyendo ocultos</li>
+                                    <li><code>cd ~</code> - Ir al directorio home</li>
+                                    <li><code>pwd</code> - Mostrar ruta actual</li>
+                                    <li><code>tree</code> - Mostrar estructura de directorios</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="command-card">
+                                <h3>Gestión de Archivos</h3>
+                                <ul class="command-list">
+                                    <li><code>cp -r dir1 dir2</code> - Copiar directorios recursivamente</li>
+                                    <li><code>mv archivo1 archivo2</code> - Renombrar archivos</li>
+                                    <li><code>rm -rf directorio</code> - Eliminar directorio y contenido</li>
+                                    <li><code>chmod 755 archivo</code> - Cambiar permisos</li>
+                                </ul>
+                            </div>
+
+                            <div class="command-card">
+                                <h3>Procesos y Sistema</h3>
+                                <ul class="command-list">
+                                    <li><code>top</code> - Monitorizar procesos en tiempo real</li>
+                                    <li><code>ps aux | grep proceso</code> - Buscar procesos</li>
+                                    <li><code>kill -9 PID</code> - Terminar proceso por ID</li>
+                                    <li><code>df -h</code> - Ver espacio en disco</li>
+                                </ul>
+                            </div>
+
+                            <div class="command-card">
+                                <h3>Redes y Conexiones</h3>
+                                <ul class="command-list">
+                                    <li><code>ifconfig</code> - Configuración de red</li>
+                                    <li><code>ping dominio.com</code> - Probar conectividad</li>
+                                    <li><code>ssh usuario@servidor</code> - Conexión remota</li>
+                                    <li><code>scp archivo usuario@servidor:ruta</code> - Copia segura</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Pestaña Windows -->
+                        <div class="tab-pane" id="windows-tab">
+                            <div class="command-card">
+                                <h3>Navegación de Archivos</h3>
+                                <ul class="command-list">
+                                    <li><code>dir /a</code> - Listar archivos incluyendo ocultos</li>
+                                    <li><code>cd %userprofile%</code> - Ir al directorio usuario</li>
+                                    <li><code>tree /f</code> - Mostrar estructura de directorios</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="command-card">
+                                <h3>Gestión de Archivos</h3>
+                                <ul class="command-list">
+                                    <li><code>copy /y archivo1 archivo2</code> - Copiar sin confirmar</li>
+                                    <li><code>ren archivo1 archivo2</code> - Renombrar archivos</li>
+                                    <li><code>del /s /q directorio</code> - Eliminar recursivamente</li>
+                                </ul>
+                            </div>
+
+                            <div class="command-card">
+                                <h3>Sistema y Redes</h3>
+                                <ul class="command-list">
+                                    <li><code>tasklist</code> - Listar procesos</li>
+                                    <li><code>taskkill /pid 1234 /f</code> - Terminar proceso</li>
+                                    <li><code>ipconfig /all</code> - Configuración de red</li>
+                                    <li><code>netstat -ano</code> - Conexiones de red</li>
+                                </ul>
+                            </div>
+
+                            <div class="command-card">
+                                <h3>Administración</h3>
+                                <ul class="command-list">
+                                    <li><code>systeminfo</code> - Información del sistema</li>
+                                    <li><code>chkdsk /f</code> - Reparar disco</li>
+                                    <li><code>sfc /scannow</code> - Reparar archivos sistema</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Pestaña macOS -->
+                        <div class="tab-pane" id="macos-tab">
+                            <div class="command-card">
+                                <h3>Comandos Especiales</h3>
+                                <ul class="command-list">
+                                    <li><code>open .</code> - Abrir Finder en ubicación actual</li>
+                                    <li><code>say "hola"</code> - Conversión texto a voz</li>
+                                    <li><code>brew install paquete</code> - Instalar con Homebrew</li>
+                                    <li><code>diskutil list</code> - Listar dispositivos de almacenamiento</li>
+                                </ul>
+                            </div>
+
+                            <div class="command-card">
+                                <h3>Redes y Seguridad</h3>
+                                <ul class="command-list">
+                                    <li><code>networksetup -listallhardwareports</code> - Interfaces de red</li>
+                                    <li><code>security find-generic-password -wa "nombre"</code> - Buscar en llavero</li>
+                                    <li><code>codesign -dv --verbose=4 /aplicacion.app</code> - Verificar firma apps</li>
+                                </ul>
+                            </div>
+
+                            <div class="command-card">
+                                <h3>Sistema</h3>
+                                <ul class="command-list">
+                                    <li><code>system_profiler SPHardwareDataType</code> - Especificaciones hardware</li>
+                                    <li><code>softwareupdate -l</code> - Listar actualizaciones disponibles</li>
+                                    <li><code>pmset -g</code> - Configuración energía</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-magic"></i> Trucos Avanzados</h2>
+                <div class="tricks-grid">
+                    <div class="trick-card">
+                        <h3><i class="fas fa-redo"></i> Redirección y Pipes</h3>
+                        <p>Combinar comandos es una de las características más potentes:</p>
+                        <pre><code># Redirigir salida a archivo
+ls -l > listado.txt
+
+# Redirigir errores
+comando 2> errores.log
+
+# Pipe para filtrar resultados
+ps aux | grep chrome | sort -k3 -r</code></pre>
+                    </div>
+                    
+                    <div class="trick-card">
+                        <h3><i class="fas fa-history"></i> Historial y Atajos</h3>
+                        <p>Optimiza tu flujo de trabajo con estos trucos:</p>
+                        <pre><code># Buscar en historial (Ctrl+R)
+(reverse-i-search)`comando`
+
+# Ejecutar último comando que empiece con...
+!ls
+
+# Sustituir texto en último comando
+^original^reemplazo</code></pre>
+                        <p>Atajos útiles: Ctrl+A (inicio línea), Ctrl+E (fin línea), Ctrl+U (borrar línea)</p>
+                    </div>
+                    
+                    <div class="trick-card">
+                        <h3><i class="fas fa-code"></i> Scripting Básico</h3>
+                        <p>Crea scripts para automatizar tareas:</p>
+                        <pre><code>#!/bin/bash
+# Script de backup
+fecha=$(date +%Y%m%d)
+tar -czf backup_$fecha.tar.gz /ruta/a/respaldar
+echo "Backup completado el $(date)" >> log.txt</code></pre>
+                        <p>Ejecutar con: <code>chmod +x script.sh</code> y luego <code>./script.sh</code></p>
+                    </div>
+                    
+                    <div class="trick-card">
+                        <h3><i class="fas fa-network-wired"></i> Redes Avanzadas</h3>
+                        <p>Diagnóstico y manejo de redes:</p>
+                        <pre><code># Escanear puertos abiertos
+nmap -sV IP
+
+# Monitorizar tráfico (Linux)
+tcpdump -i eth0 -n
+
+# Conexión persistente SSH
+ssh -o ServerAliveInterval=60 user@host</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-book"></i> Recursos Adicionales</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3><i class="fas fa-globe"></i> Documentación Oficial</h3>
+                        <ul>
+                            <li><a href="https://www.gnu.org/software/bash/manual/" target="_blank">Manual de Bash</a></li>
+                            <li><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands" target="_blank">Comandos Windows</a></li>
+                            <li><a href="https://developer.apple.com/library/archive/documentation/OpenSource/Conceptual/ShellScripting/Introduction/Introduction.html" target="_blank">Shell Scripting en macOS</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-tools"></i> Herramientas Útiles</h3>
+                        <ul>
+                            <li><strong>Explainshell</strong>: Explica cada parte de un comando</li>
+                            <li><strong>TLDR Pages</strong>: Ejemplos prácticos de comandos</li>
+                            <li><strong>Cheat.sh</strong>: Hoja de trucos para comandos</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Sobre el Proyecto</h3>
+                <p>Trabajo final para la asignatura de Fundamentos de Sistemas Operativos de la Universidad Camilo José Cela.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Autores</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-user"></i> Cristian García Del Olmo</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Santiago García Frutos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Recursos</h3>
+                <ul class="footer-links">
+                    <li><a href="https://explainshell.com/" target="_blank"><i class="fas fa-question-circle"></i> ExplainShell</a></li>
+                    <li><a href="https://tldr.sh/" target="_blank"><i class="fas fa-book"></i> TLDR Pages</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Universidad Camilo José Cela. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/comandos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
